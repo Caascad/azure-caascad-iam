@@ -106,15 +106,15 @@ $ az account set --subscription "<SUBSCRIPTION_ID>"
 This `terraform` configuration needs a few inputs that will be provided to you by the Caascad team:
 
 * `caascad_tenant_id`: ID of the Caascad tenant to setup the delegation
-* `caascad_groups_mappings`: List of groups mappings describing which Caascad user groups are allowed to access your resources and the associated roles.
+* `caascad_authorizations`: List of authorizations describing which Caascad user groups are allowed to access your resources and the associated roles.
 
 This will be already in a `.tfvars` format, so you just have to create a `terraform.tfvars` file and put the content in it. It will normally look like this :
 
 ```tf
 caascad_tenant_id = "<TENANT_ID>"
 
-caascad_groups_mappings = [
-  <LIST_OF_GROUPS_MAPPINGS>
+caascad_authorizations = [
+  <LIST_OF_AUTHORIZATIONS>
 ]
 ```
 

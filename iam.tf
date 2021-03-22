@@ -6,7 +6,7 @@ resource "azurerm_lighthouse_definition" "caascad_delegation" {
 
 
   dynamic "authorization" {
-    for_each = var.caascad_groups_mappings
+    for_each = var.caascad_authorizations
     content {
       principal_id           = authorization.value.principal_id
       role_definition_id     = authorization.value.role_definition_id
