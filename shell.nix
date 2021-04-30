@@ -8,6 +8,6 @@ let
 in with toolbox; pkgs.runCommand "deps" {
   buildInputs = [
     pkgs.terraform_0_14 pkgs.terraform-providers.azurerm
-    pre-commit terraform-docs tflint
+    pre-commit terraform-docs tflint vault
   ];
 } ""
