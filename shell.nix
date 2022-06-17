@@ -7,10 +7,11 @@ let
   }) {};
 in with toolbox; pkgs.runCommand "deps" {
   buildInputs = [
-    (terraform_1_0.withPlugins (p: [ p.azurerm]))
+    (terraform_1.withPlugins (p: [ p.azurerm]))
     pre-commit
     terraform-docs
     tflint
     vault
+    azure-cli
   ];
 } ""
